@@ -1,0 +1,39 @@
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+@model Root;
+
+<div class="text-center">
+    <div id="content">
+        <div class="container text1">
+            <span style="--l: 'R'">R</span>
+            <span style="--l: 'O'">O</span>
+            <span style="--l: 'L'">L</span>
+            <span style="--l: 'E'">E</span>
+            <span style="--l: 'S'">S</span>
+        </div>
+    </div>
+    <div class="roles-container">
+        <div class="row">
+            @if (@Model.data.Count > 0)
+            {
+                var roles = new List<string>();
+                @foreach (var rol in @Model.data)
+                {
+                    @if (rol.role != null && !roles.Contains(rol.role.displayName))
+                     {
+                        roles.Add(rol.role.displayName);
+                        <div class="col-md-4">
+                            <div class="roles-card">
+                                <h2>@rol.role.displayName</h2>
+                                <img src="@rol.role.displayIcon" alt="@rol.role.displayName" width="400" />
+                                <p>@rol.role.description</p>
+                            </div>
+                        </div>
+                     }
+                }
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,337 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+@import url('https://fonts.cdnfonts.com/css/valorant');
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --v1: calc(max(9vw, 11vh));
+}
+
+body {
+    /* Margin bottom by footer height */
+    width: 100%;
+    margin-bottom: 60px;
+    background: radial-gradient(#f13c3c, black, #f13c3c);
+    position: relative;
+    margin: 0;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+.agents-container{
+    margin: 20px;
+}
+.agents-card {
+    position: relative;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(30deg,#292929,#e10d0d,black);
+}
+.portrait-overlay {
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    margin-top: 30%;
+}
+.agents-card img {
+     max-width: 100%;
+     height: auto;
+     display: block;
+     margin: 0 auto;
+     margin-top: -8%;
+}
+.agents-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-family: 'VALORANT', sans-serif;
+    font-size: 30px;
+    color: #fff;
+    text-shadow: 0px 0px 9px #508AD3;
+}
+.agents-card p {
+    color: #fff;
+    font-size: 15px;
+    text-align:justify;
+}
+
+.agents-card h3 {
+    color: #fff;
+    font-size: 18px;
+    margin-top: 10px;
+}
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4%;
+    margin-bottom: -1%;
+    transform: translateX(0px);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-60px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.container span {
+    font-size: 120px;
+    font-weight: bold;
+    position: relative;
+    font-family: 'VALORANT', sans-serif;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.container span::before {
+    content: var(--l);
+    position: absolute;
+    transform: scale(1.1);
+    filter: blur(15px)
+}
+
+.container span::after {
+    content: var(--l);
+    position: absolute;
+    height: 200%;
+    width: 100px;
+    top: 80%;
+    left: 0;
+    filter: blur(30px);
+    transform: rotateX(50deg);
+}
+
+.container span:hover {
+    filter: contrast(250%);
+}
+
+.text1 span:nth-child(1) {
+    color: #ccc;
+}
+
+.text1 span:nth-child(2) {
+    color: #ccc;
+}
+
+.text1 span:nth-child(3) {
+    color: #ccc;
+}
+
+.text1 span:nth-child(4) {
+    color: #ccc;
+}
+
+.text1 span:nth-child(5) {
+    color: #ccc;
+}
+
+.text1 span:nth-child(6) {
+    color: #ccc;
+}
+
+.text1 span:nth-child(7) {
+    color: #ccc;
+}
+
+
+.text2 span:nth-child(1) {
+    color: #ccc;
+}
+
+.text2 span:nth-child(2) {
+    color: #ccc;
+}
+
+.text2 span:nth-child(3) {
+    color: #ccc;
+}
+
+.text2 span:nth-child(4) {
+    color: #ccc;
+}
+
+.text2 span:nth-child(5) {
+    color: #ccc;
+}
+
+.text2 span:nth-child(6) {
+    color: #ccc;
+}
+.text2 span:nth-child(7) {
+    color: #ccc;
+}
+
+.text2 span:nth-child(8) {
+    color: #ccc;
+}
+
+.text2 span:nth-child(9) {
+    color: #ccc;
+}
+
+.text2 span:nth-child(10) {
+    color: #ccc;
+}
+
+.text2 span:nth-child(11) {
+    color: #ccc;
+}
+
+
+.roles-container {
+    margin: 20px;
+}
+.roles-card {
+    position: relative;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(30deg,#292929,#e10d0d,black);
+}
+.roles-card img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 4%;
+    margin-bottom:4%;
+}
+.roles-card p {
+    color: #fff;
+    font-size: 15px;
+    text-align: justify;
+}
+.roles-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-family: 'VALORANT', sans-serif;
+    font-size: 30px;
+    color: #fff;
+    text-shadow: 0px 0px 9px #508AD3;
+}
+.card-body {
+    background: linear-gradient(30deg,#292929,#e10d0d,black);
+}
+.card-body p {
+    color: #fff;
+    font-size: 15px;
+    text-align: justify;
+}
+.card-body h5 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'VALORANT', sans-serif;
+    color: #fff;
+    text-shadow: 0px 0px 9px #508AD3;
+}
+.card-custom img{
+    background: black;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+.habi-container h2 {
+    font-size: 70px;
+    font-family: 'VALORANT', sans-serif;
+    color: #fff;
+    text-shadow: 0px 0px 9px #508AD3;
+}
+.card-deck{
+    margin-bottom:5%;
+    margin-top:5%;
+}
+.image{
+    width:50%;
+}
+
+
+

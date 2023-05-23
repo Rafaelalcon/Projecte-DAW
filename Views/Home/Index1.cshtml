@@ -1,0 +1,49 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Agents Page";
+}
+@model Root
+<div class="text-center">
+    <div id="content">
+        <div class="container text2">
+            <span style="--l: 'H'">H</span>
+            <span style="--l: 'A'">A</span>
+            <span style="--l: 'B'">B</span>
+            <span style="--l: 'I'">I</span>
+            <span style="--l: 'L'">L</span>
+            <span style="--l: 'I'">I</span>
+            <span style="--l: 'D'">D</span>
+            <span style="--l: 'A'">A</span>
+            <span style="--l: 'D'">D</span>
+            <span style="--l: 'E'">E</span>
+            <span style="--l: 'S'">S</span>
+        </div>
+    </div>
+    <div class="habi-container">
+        @foreach(var agente in @Model.data)
+            {
+            @if(agente.uuid != "ded3520f-4264-bfed-162d-b080e2abccf9")
+                {
+                <h2>@agente.displayName</h2>
+                <img src="@agente.bustPortrait" class="image"/>
+                <div class="card-deck">
+                    @foreach(var habilidad in agente.abilities)
+                        {
+                        <div class="card card-custom">
+                            @if(@habilidad.displayIcon != null)
+                             {
+                                <img src="@habilidad.displayIcon" class="card-img-top" alt="hablidad"/>
+                             }
+                            <div class="card-body">
+                                <h5 class="card-title">@habilidad.displayName</h5>
+                                <p class="card-text">@habilidad.description</p>
+                            </div>
+                        </div>
+                        }
+                </div>
+                }
+            }
+    </div>
+</div>

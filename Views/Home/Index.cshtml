@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model Root
+
+<div class="text-center">
+    <div id="content">
+        <div class="container text1">
+            <span style="--l: 'A'">A</span>
+            <span style="--l: 'G'">G</span>
+            <span style="--l: 'E'">E</span>
+            <span style="--l: 'N'">N</span>
+            <span style="--l: 'T'">T</span>
+            <span style="--l: 'E'">E</span>
+            <span style="--l: 'S'">S</span>
+        </div>
+    </div>
+    <div class="agents-container">
+        <div class="row">
+            @foreach (var agent in @Model.data)
+            {
+                @if (agent.uuid != "ded3520f-4264-bfed-162d-b080e2abccf9")
+                {
+                    <div class="col-md-4">
+                        <div class="agents-card">
+                            <h2>@agent.displayName</h2>
+                            <div class="portrait-overlay">
+                                <img src="@agent.fullPortrait" alt="@agent.displayName" width="400" />
+                            </div>
+                            <img src="@agent.background" alt="@agent.displayName" width="400" class="imagen1" />
+                            <p>@agent.description</p>
+                            @if (agent.role != null)
+                            {
+                                <h3>Rol: @agent.role.displayName</h3>
+                            }
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>
